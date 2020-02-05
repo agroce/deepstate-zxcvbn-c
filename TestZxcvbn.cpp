@@ -41,5 +41,6 @@ TEST(Zxcvbn, Basic) {
 	  d = ZxcvbnMatch(pwd, 0, 0);
 	});
 
+  ASSERT (d >= 0) << "Entropy should be positive!";
   ZxcvbnUnInit();
 }
